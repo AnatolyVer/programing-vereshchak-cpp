@@ -28,7 +28,7 @@ TEST(programing01cpp, get_older_test) {
   list.remove(2);
   list.remove(1);
   list.remove(0);
-  list.readFromFile("../assets/text-in");
+  list.readFromFile("../assets/text-in.txt");
   BowedInstrument expected_instrument(false, "Yamaha", 1920, "стекловолокно",
                                       "1/2");
   BowedInstrument actual_instrument = list.getElement(1);
