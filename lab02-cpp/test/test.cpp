@@ -3,7 +3,7 @@
  * @brief Файл з тестами на реалізації запису та читання з файлу
  *
  * @author Anatoly V.
- * @date 28-may-2022
+ * @date 25-may-2022
  * @version 1.0
  */
 

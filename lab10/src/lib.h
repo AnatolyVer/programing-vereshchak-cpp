@@ -18,7 +18,17 @@
 
 #define N 3
 
+/**
+ * Функція write
+ * Випадково заповнює двовимірний масив
+ */
+
 void write(int **arr, int n);
+
+/**
+ * Функція cmp
+ * Порівнює два числа
+ */
 
 int cmp(const void *a, const void *b);
 /**

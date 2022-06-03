@@ -12,21 +12,26 @@
 #include <gtest/gtest.h>
 
 TEST(programing01cpp, get_older_test) {
-  BowedInstrument b1("Beam 1940 1 wood 1/4");
-  vector<BowedInstrument> vec;
-  compare func;
-  vec.push_back(b1);
-  b1.setYear(1920);
-  vec.push_back(b1);
-  b1.setYear(1918);
-  vec.push_back(b1);
-  b1.setYear(1937);
-  vec.push_back(b1);
-  int expected = 1940;
-  int actual = vec[0].getYear();
-  ASSERT_EQ(expected, actual);
-  sort(vec, func);
-  expected = 1918;
-  actual = vec[0].getYear();
-  ASSERT_EQ(expected, actual);
+  List<int> list;
+  list.add(14);
+  list.add(2);
+  list.add(25);
+  list.add(29);
+  list.add(17);
+  list.add(4);
+  int num = 17;
+  int expected_value = 2;
+  int actual_value = list.min();
+  ASSERT_EQ(expected_value, actual_value);
+  size_t eV = 4;
+  size_t aV = list.check(17);
+  ASSERT_EQ(eV, aV);
+  list.remove(0);
+  eV = 3;
+  aV = list.check(17);
+  ASSERT_EQ(eV, aV);
+  list.sort();
+  eV = 2;
+  aV = list.check(17);
+  ASSERT_EQ(eV, aV);
 }

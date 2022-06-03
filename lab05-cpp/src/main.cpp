@@ -3,7 +3,7 @@
 /**
  * @mainpage
  * # Загальне завдання
- * Замінити клас-список на вектор, та виконати виконання сортування за допомогою функтора 
+ * Створити шаблоний клас-список на базі динамічного масиву
  *
  * @author Vereshchak A.
  * @date 25-may-2022
@@ -12,7 +12,7 @@
 
 /**
  * @file main.c
- * @brief Файл з демонстрацією роботи програми роботи з вектором
+ * @brief Файл з демонстрацією роботи програми роботи з шаблоним класом
  *
  * @author Vereshchak A.
  * @date 25-may-2022
@@ -21,16 +21,20 @@
 
 int main() {
   setlocale(LC_ALL, "rus");
-  BowedInstrument b1("Beam 1940 1 wood 1/4");
-  vector<BowedInstrument> vec;
-  compare func;
-  vec.push_back(b1);
-  b1.setYear(1920);
-  vec.push_back(b1);
-  b1.setYear(1918);
-  vec.push_back(b1);
-  b1.setYear(1937);
-  vec.push_back(b1);
-  sort(vec, func);
-  show(vec);
+  List<int> list;
+  list.add(14);
+  list.add(2);
+  list.add(25);
+  list.add(29);
+  list.add(17);
+  list.add(4);
+  int num = 17;
+  cout << "Min: " << list.min() << endl;
+  cout << list;
+  cout << "Your element is " << list.check(num) << endl;
+  list.sort();
+  cout << list;
+  cout << "Your element is " << list.check(num) << endl;
+  list.remove(1);
+  cout << list;
 }
